@@ -1,0 +1,28 @@
+﻿digraph G { node [style=filled, shape=rec]
+
+# Nodes
+"ZipCode zipCode" -> "PeanutButterShop.GetAvailable()" -> "PeanutButters"
+{"PeanutButters", "Jellies"} -> "Join" -> "Tuple{PeanutButters, Jellies}"
+"Join" -> "<>c.<CreatePipeline>b__1_0()" -> "Tuple`2"
+"Tuple`2" -> "Sandwich.Create()" -> {"Sandwich", "Collector"}
+"ZipCode zipCode" -> "JellyShop.GetAvailable()" -> "Jellies"
+
+
+# Formatting
+"ZipCode zipCode" [color=green]
+"PeanutButters" [color="#9fbff4"]
+"PeanutButterShop.GetAvailable()" [shape=invhouse]
+"Tuple{PeanutButters, Jellies}" [color="#9fbff4"]
+"Join" [color=pink]
+"Tuple`2" [color="#9fbff4"]
+"<>c.<CreatePipeline>b__1_0()" [shape=invhouse]
+"Sandwich" [color="#9fbff4"]
+"Sandwich.Create()" [shape=invhouse]
+"Collector" [color = "#c361f4"]
+"Jellies" [color="#9fbff4"]
+"JellyShop.GetAvailable()" [shape=invhouse]
+
+{ rank=same; "Sandwich.Create()", "Collector"}
+
+
+}
