@@ -6,17 +6,9 @@ public class SimpleCalls
 {
   public static Sandwich FindBestSandwich(ZipCode zipCode)
   {
-    // Set up Pipeline
     var (zipCodePipe, bestSandwichCollector) = PipeInputsAndOutputs();
-
-    // ApprovalPipeline
     PipelineApprovals.Verify(zipCodePipe);
-
-    // Send thru pipeline
     zipCodePipe.Send(zipCode);
-
-    // Original code
-
     return bestSandwichCollector.SingleResult;
   }
 
