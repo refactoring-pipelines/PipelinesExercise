@@ -9,9 +9,7 @@ public class SimpleCalls
     // Set up Pipeline
     var zipCodePipe = new InputPipe<ZipCode>("zipCode");
     var peanutButtersPipe = zipCodePipe.ProcessFunction(PeanutButterShop.GetAvailable);
-    var peanutButtersCollector = peanutButtersPipe.Collect();
     var jelliesPipe = zipCodePipe.ProcessFunction(JellyShop.GetAvailable);
-    var jelliesCollector = jelliesPipe.Collect();
     var ingredientsPipe = peanutButtersPipe.JoinTo(jelliesPipe);
 
     var bestSandwichPipe = ingredientsPipe.Process((p, j)=> Sandwich.Create(p.BestPeanutButter, j.BestJelly));
@@ -25,8 +23,6 @@ public class SimpleCalls
 
     // Original code
 
-    var peanutButters = peanutButtersCollector.SingleResult;
-    var jellies = jelliesCollector.SingleResult;
     var bestSandwich = bestSandwichCollector.SingleResult;
     return bestSandwich;
   }
