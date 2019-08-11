@@ -12,6 +12,9 @@ public class SimpleCalls
     var peanutButtersCollector = peanutButtersPipe.Collect();
     var jelliesPipe = zipCodePipe.ProcessFunction(JellyShop.GetAvailable);
     var jelliesCollector = jelliesPipe.Collect();
+    var ingredientsPipe = peanutButtersPipe.JoinTo(jelliesPipe);
+
+    //var bestSandwich = Sandwich.Create(peanutButters.BestPeanutButter, jellies.BestJelly);
 
     // ApprovalPipeline
     PipelineApprovals.Verify(zipCodePipe);
