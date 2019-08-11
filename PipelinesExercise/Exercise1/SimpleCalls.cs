@@ -1,18 +1,16 @@
 ﻿using PipelinesExercise;
 using Refactoring.Pipelines;
-using Refactoring.Pipelines.Approvals;
 
 public class SimpleCalls
 {
   public static Sandwich FindBestSandwich(ZipCode zipCode)
   {
-    var (zipCodePipe, bestSandwichCollector) = PipeInputsAndOutputs();
-    PipelineApprovals.Verify(zipCodePipe);
+    var (zipCodePipe, bestSandwichCollector) = CreatePipe();
     zipCodePipe.Send(zipCode);
     return bestSandwichCollector.SingleResult;
   }
 
-  private static (InputPipe<ZipCode> zipCodePipe, CollectorPipe<Sandwich> bestSandwichCollector) PipeInputsAndOutputs()
+  public static (InputPipe<ZipCode> zipCodePipe, CollectorPipe<Sandwich> bestSandwichCollector) CreatePipe()
   {
     var zipCodePipe = new InputPipe<ZipCode>("zipCode");
     var peanutButtersPipe = zipCodePipe.ProcessFunction(PeanutButterShop.GetAvailable);

@@ -1,13 +1,18 @@
+using ApprovalTests.Reporters;
+using ApprovalTests.Reporters.Windows;
 using NUnit.Framework;
 using PipelinesExercise;
+using Refactoring.Pipelines.Approvals;
 
 public class UnitTest1
 {
+  [UseReporter(typeof(TortoiseTextDiffReporter))]
   [Test]
   public void Test_StartHere()
   {
     Implementation.LogOrError = Implementation.Log;
-    SimpleCalls.FindBestSandwich(new ZipCode("90210"));
+    var (zipCodePipe, bestSandwichCollector) = SimpleCalls.CreatePipe();
+    PipelineApprovals.Verify(zipCodePipe);
   }
 
 
