@@ -23,7 +23,6 @@ public class SimpleCalls
 
     // Original code
 
-    var bestSandwich = bestSandwichCollector.SingleResult;
-    return bestSandwich;
+    return bestSandwichCollector.SingleResult;
   }
 }
