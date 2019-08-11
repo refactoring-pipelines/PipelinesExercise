@@ -15,6 +15,7 @@ public class SimpleCalls
     var ingredientsPipe = peanutButtersPipe.JoinTo(jelliesPipe);
 
     var bestSandwichPipe = ingredientsPipe.Process((p, j)=> Sandwich.Create(p.BestPeanutButter, j.BestJelly));
+    var bestSandwichCollector = bestSandwichPipe.Collect();
 
     // ApprovalPipeline
     PipelineApprovals.Verify(zipCodePipe);
@@ -26,7 +27,7 @@ public class SimpleCalls
 
     var peanutButters = peanutButtersCollector.SingleResult;
     var jellies = jelliesCollector.SingleResult;
-    var bestSandwich = Sandwich.Create(peanutButters.BestPeanutButter, jellies.BestJelly);
+    var bestSandwich = bestSandwichCollector.SingleResult;
     return bestSandwich;
   }
 }
