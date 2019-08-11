@@ -1,17 +1,12 @@
-﻿using System.Collections.Generic;
-using System.Text;
-using ApprovalUtilities.SimpleLogger.Writers;
+﻿using PipelinesExercise;
 
-namespace PipelinesExercise
+public class SimpleCalls
 {
-    public class SimpleCalls
+    public static Sandwich FindBestSandwich(ZipCode zipCode)
     {
-        public static Sandwich FindBestSandwich(ZipCode zipCode)
-        {
-            var peanutButters = PeanutButterShop.GetAvailable(zipCode);
-            var jellies = JellyShop.GetAvailable(zipCode);
-            var bestSandwich = Sandwich.Create(peanutButters.BestPeanutButter, jellies.BestJelly);
-            return bestSandwich;
-        }
+        var peanutButters = PeanutButterShop.GetAvailable(zipCode);
+        var jellies = JellyShop.GetAvailable(zipCode);
+        var bestSandwich = Sandwich.Create(peanutButters.BestPeanutButter, jellies.BestJelly);
+        return bestSandwich;
     }
 }
