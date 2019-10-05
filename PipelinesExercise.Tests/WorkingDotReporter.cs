@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using ApprovalTests.Reporters;
-using Refactoring.Pipelines.Approvals;
 
 namespace Tests
 {
