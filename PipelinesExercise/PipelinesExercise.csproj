@@ -5,7 +5,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Refactoring.Pipelines.Approvals" Version="7.1.0" />
+      <PackageReference Include="Refactoring.Pipelines.Approvals" Version="7.3.0" />
     </ItemGroup>
 
 </Project>
