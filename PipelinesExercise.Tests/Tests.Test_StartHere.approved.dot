@@ -2,9 +2,8 @@
 
 # Nodes
 "ZipCode zipCode" -> "PeanutButterShop.GetAvailable()" -> "PeanutButters"
-{"PeanutButters", "Jellies"} -> "Join" -> "Tuple{PeanutButters, Jellies}"
-"Join" -> "<>c.<CreatePipeline>b__1_0()" -> "Tuple`2"
-"Tuple`2" -> "Sandwich.Create()" -> {"Sandwich", "Collector"}
+{"PeanutButters", "Jellies"} -> "Join" -> "Tuple<PeanutButters, Jellies>"
+"Tuple<PeanutButters, Jellies>" -> "Create(j.BestPeanutButter, p.BestJelly)" -> {"Sandwich", "Collector"}
 "ZipCode zipCode" -> "JellyShop.GetAvailable()" -> "Jellies"
 
 
@@ -12,17 +11,15 @@
 "ZipCode zipCode" [color=green]
 "PeanutButters" [color="#9fbff4"]
 "PeanutButterShop.GetAvailable()" [shape=invhouse]
-"Tuple{PeanutButters, Jellies}" [color="#9fbff4"]
+"Tuple<PeanutButters, Jellies>" [color="#9fbff4"]
 "Join" [color=pink]
-"Tuple`2" [color="#9fbff4"]
-"<>c.<CreatePipeline>b__1_0()" [shape=invhouse]
 "Sandwich" [color="#9fbff4"]
-"Sandwich.Create()" [shape=invhouse]
+"Create(j.BestPeanutButter, p.BestJelly)" [shape=invhouse]
 "Collector" [color = "#c361f4"]
 "Jellies" [color="#9fbff4"]
 "JellyShop.GetAvailable()" [shape=invhouse]
 
-{ rank=same; "Sandwich.Create()", "Collector"}
+{ rank=same; "Create(j.BestPeanutButter, p.BestJelly)", "Collector"}
 
 
 }
