@@ -3,7 +3,7 @@
 # Nodes
 "ZipCode zipCode" -> "PeanutButterShop.GetAvailable()" -> "PeanutButters"
 {"PeanutButters", "Jellies"} -> "Join" -> "Tuple<PeanutButters, Jellies>"
-"Tuple<PeanutButters, Jellies>" -> "Create(j.BestPeanutButter, p.BestJelly)" -> {"Sandwich", "Collector"}
+"Tuple<PeanutButters, Jellies>" -> "Create(p.BestPeanutButter, j.BestJelly)" -> {"Sandwich", "Collector"}
 "ZipCode zipCode" -> "JellyShop.GetAvailable()" -> "Jellies"
 
 
@@ -14,12 +14,12 @@
 "Tuple<PeanutButters, Jellies>" [color="#9fbff4"]
 "Join" [color=pink]
 "Sandwich" [color="#9fbff4"]
-"Create(j.BestPeanutButter, p.BestJelly)" [shape=invhouse]
+"Create(p.BestPeanutButter, j.BestJelly)" [shape=invhouse]
 "Collector" [color = "#c361f4"]
 "Jellies" [color="#9fbff4"]
 "JellyShop.GetAvailable()" [shape=invhouse]
 
-{ rank=same; "Create(j.BestPeanutButter, p.BestJelly)", "Collector"}
+{ rank=same; "Create(p.BestPeanutButter, j.BestJelly)", "Collector"}
 
 
 }

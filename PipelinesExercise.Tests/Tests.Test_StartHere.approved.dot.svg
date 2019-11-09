@@ -87,15 +87,15 @@
 <path fill="none" stroke="#000000" d="M339.0706,-215.8314C339.0706,-208.131 339.0706,-198.9743 339.0706,-190.4166"/>
 <polygon fill="#000000" stroke="#000000" points="342.5707,-190.4132 339.0706,-180.4133 335.5707,-190.4133 342.5707,-190.4132"/>
 </g>
-<!-- Create(j.BestPeanutButter, p.BestJelly) -->
+<!-- Create(p.BestPeanutButter, j.BestJelly) -->
 <g id="node7" class="node">
-<title>Create(j.BestPeanutButter, p.BestJelly)</title>
+<title>Create(p.BestPeanutButter, j.BestJelly)</title>
 <polygon fill="#d3d3d3" stroke="#000000" points="138.0464,-84.4377 339.0706,-72 540.0948,-84.4377 539.9072,-104.5623 138.234,-104.5623 138.0464,-84.4377"/>
-<text text-anchor="middle" x="339.0706" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">Create(j.BestPeanutButter, p.BestJelly)</text>
+<text text-anchor="middle" x="339.0706" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">Create(p.BestPeanutButter, j.BestJelly)</text>
 </g>
-<!-- Tuple&lt;PeanutButters, Jellies&gt;&#45;&gt;Create(j.BestPeanutButter, p.BestJelly) -->
+<!-- Tuple&lt;PeanutButters, Jellies&gt;&#45;&gt;Create(p.BestPeanutButter, j.BestJelly) -->
 <g id="edge6" class="edge">
-<title>Tuple&lt;PeanutButters, Jellies&gt;&#45;&gt;Create(j.BestPeanutButter, p.BestJelly)</title>
+<title>Tuple&lt;PeanutButters, Jellies&gt;&#45;&gt;Create(p.BestPeanutButter, j.BestJelly)</title>
 <path fill="none" stroke="#000000" d="M339.0706,-143.8314C339.0706,-135.1142 339.0706,-124.5309 339.0706,-115.0629"/>
 <polygon fill="#000000" stroke="#000000" points="342.5707,-115.0059 339.0706,-105.0059 335.5707,-115.006 342.5707,-115.0059"/>
 </g>
@@ -105,9 +105,9 @@
 <polygon fill="#9fbff4" stroke="#9fbff4" points="374.7799,-36 303.3613,-36 303.3613,0 374.7799,0 374.7799,-36"/>
 <text text-anchor="middle" x="339.0706" y="-13.8" font-family="Times,serif" font-size="14.00" fill="#000000">Sandwich</text>
 </g>
-<!-- Create(j.BestPeanutButter, p.BestJelly)&#45;&gt;Sandwich -->
+<!-- Create(p.BestPeanutButter, j.BestJelly)&#45;&gt;Sandwich -->
 <g id="edge7" class="edge">
-<title>Create(j.BestPeanutButter, p.BestJelly)&#45;&gt;Sandwich</title>
+<title>Create(p.BestPeanutButter, j.BestJelly)&#45;&gt;Sandwich</title>
 <path fill="none" stroke="#000000" d="M339.0706,-71.8314C339.0706,-64.131 339.0706,-54.9743 339.0706,-46.4166"/>
 <polygon fill="#000000" stroke="#000000" points="342.5707,-46.4132 339.0706,-36.4133 335.5707,-46.4133 342.5707,-46.4132"/>
 </g>
@@ -117,9 +117,9 @@
 <polygon fill="#c361f4" stroke="#c361f4" points="626.1689,-108 557.9723,-108 557.9723,-72 626.1689,-72 626.1689,-108"/>
 <text text-anchor="middle" x="592.0706" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">Collector</text>
 </g>
-<!-- Create(j.BestPeanutButter, p.BestJelly)&#45;&gt;Collector -->
+<!-- Create(p.BestPeanutButter, j.BestJelly)&#45;&gt;Collector -->
 <g id="edge8" class="edge">
-<title>Create(j.BestPeanutButter, p.BestJelly)&#45;&gt;Collector</title>
+<title>Create(p.BestPeanutButter, j.BestJelly)&#45;&gt;Collector</title>
 <path fill="none" stroke="#000000" d="M540.1858,-90C542.7868,-90 545.3878,-90 547.9888,-90"/>
 <polygon fill="#000000" stroke="#000000" points="548.0213,-93.5001 558.0212,-90 548.0212,-86.5001 548.0213,-93.5001"/>
 </g>
