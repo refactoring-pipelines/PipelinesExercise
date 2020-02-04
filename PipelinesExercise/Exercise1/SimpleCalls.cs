@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using Refactoring.Pipelines;
+using Refactoring.Pipelines.ApprovalTests;
+using System.Collections.Generic;
 using System.Text;
 using ApprovalUtilities.SimpleLogger.Writers;
 
