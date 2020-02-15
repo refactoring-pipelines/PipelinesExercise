@@ -1,8 +1,6 @@
-﻿using Refactoring.Pipelines.Async;
-using Refactoring.Pipelines.ApprovalTests;
-using System.Collections.Generic;
-using System.Text;
-using ApprovalUtilities.SimpleLogger.Writers;
+﻿using System;
+using System.Linq;
+using Refactoring.Pipelines.Async;
 using Refactoring.Pipelines.InputsAndOutputs;
 
 namespace PipelinesExercise
@@ -18,7 +16,7 @@ namespace PipelinesExercise
 
         public static Inputs1AndOutputs1<ZipCode, Sandwich> SetUpFindBestSandwichPipeline()
         {
-            var zipCodePipe = new InputPipe<ZipCode>("zipCode");
+            var zipCodePipe = new Refactoring.Pipelines.Async.InputPipe<ZipCode>("zipCode");
             var peanutButtersPipe = zipCodePipe.ProcessFunction(PeanutButterShop.GetAvailable);
             var jelliesPipe = zipCodePipe.ProcessFunction(JellyShop.GetAvailable);
 
@@ -26,7 +24,7 @@ namespace PipelinesExercise
             var bestJelliesPipe = jelliesPipe.Process(_ => _.BestJelly);
             var bestPeanutButterAndBestJellyPipe = bestPeanutButterPipe.JoinTo(bestJelliesPipe);
             var bestSandwichPipe =
-                bestPeanutButterAndBestJellyPipe.ProcessFunction(t => Sandwich.Create(t.Item1, t.Item2));
+                bestPeanutButterAndBestJellyPipe.Process(t => Sandwich.Create(t.Item1, t.Item2));
 
             var bestSandwichCollector = bestSandwichPipe.Collect();
 

@@ -7,7 +7,7 @@ namespace Tests
 {
     public class Tests
     {
-        [UseReporter(typeof(DiffReporter))]
+        [UseReporter(typeof(DotReporter))]
         [Test]
         public void Test_StartHere()
         {
