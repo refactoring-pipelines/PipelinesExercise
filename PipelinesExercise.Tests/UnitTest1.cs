@@ -1,15 +1,18 @@
+using ApprovalTests.Reporters;
 using NUnit.Framework;
 using PipelinesExercise;
+using Refactoring.Pipelines.ApprovalTests;
 
 namespace Tests
 {
     public class Tests
     {
+        [UseReporter(typeof(DiffReporter))]
         [Test]
         public void Test_StartHere()
         {
-            Implementation.LogOrError = Implementation.Log;
-            SimpleCalls.FindBestSandwich(new ZipCode("90210"));
+            var inputs1AndOutputs1 = SimpleCalls.SetUpFindBestSandwichPipeline();
+            PipelineApprovals.Verify(inputs1AndOutputs1.Input1);
         }
 
         [Test]
